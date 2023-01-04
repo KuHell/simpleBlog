@@ -166,3 +166,7 @@ NextJS를 활용하면 페이지별로 Pre-rendering방식을 선택할 수있�
 ```bash
 yarn add gray-matter
 ```
+
+---
+
+# Dynamic Routes
