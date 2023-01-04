@@ -101,3 +101,56 @@ a tag를 타고 들어가면 gackground-color가 없어진다
 Link 컴포넌트를 이용하면, Viewport에 LInk 컴포넌트가 노출되었을때 href로 연결된 페이지의 부분을 로드한다.
 ![](https://velog.velcdn.com/images/itkdgus489/post/01c38196-7160-43b2-a68d-df0a38a5b13c/image.gif)
 스크롤을 내려서 Link가 노출되면 미리 필요한 데이터를 로드한다
+
+---
+
+# Layouts / Styling
+
+## public
+
+정적 리소스를 NextJS로 서빙하기 위한 디렉토리
+특정한path를 주지않고 사용 가능하다.
+
+- robots.txt
+  웹에 대한 정보들을 읽어가는 크롤러들이 어떤 파일을 읽어가고 어떤파일은 읽어가면 안된다 라는 것을 정의해 놓은 파일이다.
+- image
+
+등을 넣을 수 있다.
+
+## Image Component
+
+`img` 라는 태그가 있지만 NextJS에서 제공하는 `Image`가 있다
+
+`a`와 `Link`같은 존재이다
+
+### img
+
+```javascript
+<img src="/images/profile.jpg" alt="프로필 이미지" />
+```
+
+### NextJS에서 제공하는 Image
+
+```javascript
+<Image src="/images/profile.jpg" width={140} height={140} alt="프로필 이미지" />
+```
+
+Image 태크도 Link와 같이 VIewPort에 들어갔을때 데이터를 로드한다
+
+---
+
+# Pre-rendering / Data Fetching
+
+NextJS를 활용하면 페이지별로 Pre-rendering방식을 선택할 수있다.
+이 페이지는 SSR, 이 페이지는 SSG 이런식으로 가능 하다.
+
+## SSG를 사용하면 좋은 페이지
+
+자주 바뀌지 않고 정적인 페이지가 적정하다
+
+- Marketing pages
+- Blog posts
+- E-commerce product listings
+- Help and documentation
+
+사용자가 페이지를 요청하기 전에 pre-render 할 수 있는가? 를 생각하보면 편할 것 같다.
