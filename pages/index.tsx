@@ -32,8 +32,6 @@ export default function Home({ allPostsData }: any) {
             <li className={utilStyles.listItem} key={id}>
               {title}
               <br />
-              {id}
-              <br />
               {date}
             </li>
           ))}
