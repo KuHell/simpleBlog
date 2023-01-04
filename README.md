@@ -154,3 +154,15 @@ NextJS를 활용하면 페이지별로 Pre-rendering방식을 선택할 수있�
 - Help and documentation
 
 사용자가 페이지를 요청하기 전에 pre-render 할 수 있는가? 를 생각하보면 편할 것 같다.
+
+### SSG의 2가지 케이스
+
+- 외부 데이터 없이 pre-rendering
+  api 호출도 필요없고 외부 호출도 필요없을떄 정적인 페이지만 그린다면 page에 전달한 props만 설정 해두면 된다
+
+- 외부 데이터를 가져와서 pre-rendering
+  다른파일, api, db등
+
+```bash
+yarn add gray-matter
+```
